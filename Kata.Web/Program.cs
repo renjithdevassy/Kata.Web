@@ -1,7 +1,10 @@
+using Kata.Web.Application;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ICalculate, Calculate>();
 
 var app = builder.Build();
 
